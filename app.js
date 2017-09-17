@@ -29,7 +29,7 @@ app.use('/', function(req,res,next){
 	next();
 });
 app.use('/', index);
-app.use('/projects', projects);
+app.use('/project', projects);
 app.use('/api', api);
 
 
