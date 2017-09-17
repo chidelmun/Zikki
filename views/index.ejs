@@ -3,9 +3,44 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<div class="container">
+  		<div class="row">
+	  		<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">Zikki</a>
+			    </div>
+			    <ul class="nav navbar-nav">
+			      <li class="active"><a href="#">Project ID : 1092334</a></li>
+			      <li><a href="#">Project status : Started  </a></li>
+			      <li><a href="#"> <span class="glyphicon glyphicon-time"></span> Last Modified : Yesterdat</a></li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+			      <li><a href="#"><span class="glyphicon glyphicon-time"></span> Started On: Wed Sep 14 2017 </a></li>
+			      <li><a href="#"><span class="glyphicon glyphicon-time"></span> Due on: Mon Sep 20 2019 </a></li>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+
+  		<div class="row">
+  			<div class="jumbotron">
+			    <h3><%= title %></h3>
+			    <p> An in house  platform for tracking collaboratrive projects build with Nodejs </p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="jumbotron">
+				<h2>[Project tracking Info here....]</h2>
+				
+			</div>
+			
+		</div>
+	</div>
   </body>
 </html>
