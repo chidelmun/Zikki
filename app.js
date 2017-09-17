@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var projects = require('./routes/projects');
+var api = require('./routes/api');
 
 var app = express();
 
@@ -28,7 +29,8 @@ app.use('/', function(req,res,next){
 	next();
 });
 app.use('/', index);
-app.use('/users', users);
+app.use('/projects', projects);
+app.use('/api', api);
 
 
 

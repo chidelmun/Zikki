@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('project', { title: 'Zikki Project progress Tracker' });
 });
 
 module.exports = router;
