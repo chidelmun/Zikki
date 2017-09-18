@@ -128,3 +128,7 @@ a:hover {
 .arrow-steps .step.current:after {
 	border-left: 17px solid #23468c;	
 }
+
+label{margin-left: 20px;}
+#datepicker{width:580px; margin: 0 20px 20px 20px;}
+#datepicker > span:hover{cursor: pointer;}	

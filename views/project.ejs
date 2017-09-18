@@ -5,7 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
   </head>
   <body>
   	<div class="container">
@@ -34,12 +38,12 @@
 				  <div class="container-fluid">
 				    
 				    <ul class="nav navbar-nav">
-				      <li class="active"><a href="#">Enter a Project ID to track its progress</a></li>
+				      <li class="active"><a href="#">Enter another Project ID to track its progress</a></li>
 				      
 				    </ul>
-				    <form class="navbar-form navbar-right">
+				    <form class="navbar-form navbar-right" method="post" action="/api/project/">
 				      <div class="input-group">
-				        <input type="text" class="form-control" placeholder="Start Tracking">
+				        <input name="proId" type="text" class="form-control" placeholder="Start Tracking">
 				        <div class="input-group-btn">
 				          <button class="btn btn-default" type="submit">
 				            <i class="glyphicon glyphicon-search"></i>
@@ -52,6 +56,14 @@
 			   
 			</div>
 		</div>
+
+		<label>Select Date: </label>
+			<div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+			    <input class="form-control" type="text" readonly />
+			    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+			</div>
+
+
 
 		<div class="row">
 			<div class="jumbotron">
@@ -70,6 +82,14 @@
 			
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(function () {
+		  $("#datepicker").datepicker({ 
+		        autoclose: true, 
+		        todayHighlight: true
+		  }).datepicker('update', new Date());
+		});
+	</script>
 	<script type="text/javascript" src="javascript/main.js">
   </body>
 </html>

@@ -24,4 +24,9 @@ router.post('/project/add', function(req,res,next){
 		
 });
 
+router.post('/project/', function(req,res,next){
+		console.log(req.body.proId);
+		res.redirect('/project');
+		
+});
 module.exports = router;
