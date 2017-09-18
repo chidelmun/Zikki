@@ -11,6 +11,10 @@ nav.navbar.navbar-inverse{
 	background-color: #23468c;
 }
 
+.navbar-inverse .navbar-brand{
+	color: white;
+}
+
 /* Global CSS, you probably don't need that */
 
 .clearfix:after {

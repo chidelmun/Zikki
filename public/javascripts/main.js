@@ -24,4 +24,14 @@ jQuery( document ).ready(function() {
 			})		
 		});
 
+		$("#start_date").datepicker({ 
+		        autoclose: true, 
+		        todayHighlight: true
+		  }).datepicker('update', new Date());
+
+		  $("#due_date").datepicker({ 
+		        autoclose: true, 
+		        todayHighlight: true
+		  }).datepicker('update', new Date());
+
 	})

@@ -31,9 +31,9 @@
 			<div class="jumbotron">
 				<form class="form-horizontal" method="post" action="/api/project/add">
 				    <div class="form-group">
-		            	<label class="col-sm-2 control-label">Project Title</label>
-		                <div id="title_id" class="input-group date" >
-					    <input class="form-control" type="text"  />
+		            	<label class="col-sm-2 control-label">Project ID </label>
+		                <div id="title_id" class="input-group " >
+					    <input name="ptitle" class="form-control" type="text"  />
 					    <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
 					</div>
 		            </div>
@@ -41,7 +41,7 @@
 				     <div class="form-group">
 				     	<label class="col-sm-2 control-label">Start Date</label>
 		                <div id="start_date" class="input-group date" data-date-format="mm-dd-yyyy">
-						    <input class="form-control" type="text" readonly />
+						    <input name="sdate" class="form-control" type="text" readonly />
 						    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 						</div>
 		            </div>
@@ -49,19 +49,21 @@
 		            <div class="form-group">
 		            	<label class="col-sm-2 control-label">Due Date</label>
 		                <div id="due_date" class="input-group date" data-date-format="mm-dd-yyyy">
-					    <input class="form-control" type="text" readonly />
+					    <input name="ddate" class="form-control" type="text" readonly />
 					    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 					</div>
 		            </div>
 
 		            <div class="form-group">
 		            	<label class="col-sm-2 control-label">Status</label>
-		            	<select class="selectpicker show-menu-arrow">
+		            	<select name="pstatus" class="selectpicker show-menu-arrow">
 						  		<option>Select one</option>
-						  		<option>STALLED</option>
-						       	<option>STARTED</option>
-						       	<option>IN PROGRESS</option>
-						       	<option>COMPLETE</option>
+						  		<option value="STALLED">STALLED</option>
+						       	<option value="STARTED">STARTED</option>
+						       	<option value="TESTING">TESTING </option>
+						       	<option value="IN PROGRESS">IN PROGRESS</option>
+						       	<option value="DEPLOYED">DEPLOYED </option>
+						       	<option value="COMPLETE">COMPLETE</option>
 						</select>
 					</div>
 		            </div>
@@ -69,8 +71,7 @@
 				    
 				</form>
 	</div>
-  </body>
-  <script type="text/javascript">
+	<script type="text/javascript">
 		$(function () {
 		  $("#start_date").datepicker({ 
 		        autoclose: true, 
@@ -83,4 +84,6 @@
 		  }).datepicker('update', new Date());
 		});
 	</script>
+  </body>
+  
 </html>
