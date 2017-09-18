@@ -57,77 +57,10 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="jumbotron">
-				<div class="container">	
-					<% if(current_state === "STARTED") {%>
-					<div class="wrapper">	
-							<div class="arrow-steps clearfix">
-					          <div class="step current"> <span>Started</span> </div>
-					          <div class="step "> <span>In Progress/Stalled</span> </div>
-					          <div class="step"> <span>Testing</span> </div>
-					          <div class="step"> <span>Deployed</span> </div>
-					          <div class="step"> <span>Finished</span> </div>
-							</div>
-					</div>
-
-					<% } else if(current_state === "IN PROGRESS") { %>
-						<div class="wrapper">	
-							<div class="arrow-steps clearfix">
-					          <div class="step current"> <span>Started</span> </div>
-					          <div class="step  current"> <span>In Progress</span> </div>
-					          <div class="step"> <span>Testing</span> </div>
-					          <div class="step"> <span>Deployed</span> </div>
-					          <div class="step"> <span>Finished</span> </div>
-							</div>
-					</div>
-
-					<% } else if(current_state === "STALLED") { %>
-						<div class="wrapper">	
-							<div class="arrow-steps clearfix">
-					          <div class="step current"> <span>Started</span> </div>
-					          <div class="step  current"> <span>Stalled</span> </div>
-					          <div class="step"> <span>Testing</span> </div>
-					          <div class="step"> <span>Deployed</span> </div>
-					          <div class="step"> <span>Finished</span> </div>
-							</div>
-					</div>
-
-					<% } else if(current_state === "TESTING") { %>
-						<div class="wrapper">	
-							<div class="arrow-steps clearfix">
-					          <div class="step current"> <span>Started</span> </div>
-					          <div class="step  current"> <span>In Progress/Stalled</span> </div>
-					          <div class="step current"> <span>Testing</span> </div>
-					          <div class="step"> <span>Deployed</span> </div>
-					          <div class="step"> <span>Finished</span> </div>
-							</div>
-					</div>
-
-					<% } else if(current_state === "DEPLOYED") { %>
-						<div class="wrapper">	
-							<div class="arrow-steps clearfix">
-					          <div class="step current"> <span>Started</span> </div>
-					          <div class="step  current"> <span>In Progress/Stalled</span> </div>
-					          <div class="step current"> <span>Testing</span> </div>
-					          <div class="step current"> <span>Deployed</span> </div>
-					          <div class="step"> <span>Finished</span> </div>
-							</div>
-					</div>
-
-					<% } else if(current_state === "COMPLETE") { %>
-						<div class="wrapper">	
-							<div class="arrow-steps clearfix">
-					          <div class="step current"> <span>Started</span> </div>
-					          <div class="step  current"> <span>In Progress/Stalled</span> </div>
-					          <div class="step current"> <span>Testing</span> </div>
-					          <div class="step current"> <span>Deployed</span> </div>
-					          <div class="step current"> <span>Finished</span> </div>
-							</div>
-					</div>
-
-					<% } else if(current_state === "UNKNOWN") { %>
-						<div class="wrapper">	
+			<div class="row">
+					<div class="jumbotron">
+						<div class="wrapper">
+							<center><h2 class="text-primary">NO SUCH PROJECT</h2></center>	
 							<div class="arrow-steps clearfix">
 					          <div class="step "> <span>Started</span> </div>
 					          <div class="step  "> <span>In Progress/Stalled</span> </div>
@@ -135,14 +68,10 @@
 					          <div class="step "> <span>Deployed</span> </div>
 					          <div class="step "> <span>Finished</span> </div>
 							</div>
+						</div>
 					</div>
-				
-					<% } %>
-					
-				</div>
-			</div>
 			
-		</div>
+			</div>
 	</div>
 	<script type="text/javascript" src="javascript/main.js">
   </body>
