@@ -13,14 +13,15 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/project/add', function(req,res,next){
-		var title = req.body.ptitle;
+		var ptitle = req.body.ptitle;
 		var sdate = req.body.sdate;
 		var ddate = req.body.ddate;
 		var status = req.body.pstatus;
-		var project = {project_Id:title,Start_date:sdate, Due_date : ddate, Status : status};
+		var project = {project_Id:ptitle,Start_date:sdate, Due_date : ddate, Status : status};
 		console.log(project);
 		ref.push(project);
-		res.redirect('/');
+		// res.redirect('/');
+		res.render('project', {title:ptitle, started_on : sdate, due_on : ddate, current_state : status});
 		
 		
 });
@@ -32,7 +33,7 @@ router.post('/project/', function(req,res,next){
 	      var childData = childSnapshot.val();
 	      if (childData.project_Id === req.body.proId) {
 	      	console.log(childData.Status);
-	      	res.render('project', {title:'Project Info', started_on : childData.Start_date, due_on : childData.Due_date, current_state : childData.Status});
+	      	res.render('project', {title:childData.project_Id, started_on : childData.Start_date, due_on : childData.Due_date, current_state : childData.Status});
 	      }else{
 	      	console.log(req.body.proId);
 	      	// res.render('notfound', {title:'No such project', started_on : 'N/A', due_on : 'N/A', current_state : 'UNKNOWN'});
