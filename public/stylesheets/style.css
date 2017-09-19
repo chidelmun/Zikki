@@ -7,6 +7,10 @@ a {
   color: #00B7FF;
 }
 
+.jumbotron{
+	background-color: teal;
+}
+
 nav.navbar.navbar-inverse{
 	background-color: #23468c;
 }
@@ -32,7 +36,7 @@ nav.navbar.navbar-inverse{
 
 .wrapper {
 	display: table-cell;
-	height: 400px;
+	height: 40px;
 	vertical-align: middle;
 }
 
